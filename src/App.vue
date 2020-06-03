@@ -1,19 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>
+      Poem 10
+    </h1>
+    <br/>
+    <div>
+      <p>The right syllable count</p>
+      <VueNumberInput v-model="exactSyllableCount" :min="1" :max="100" inline center controls></VueNumberInput>
+    </div>
+     <br/>
+    <LinedTextarea
+      :exactSyllableCount="exactSyllableCount"
+      :disabled="disable"
+      :nowrap="nowrap === 'true'"
+      :validate="validate"
+      :styles="{ height: height + 'px', width: width + 'px', resize }"
+      v-model="content"
+    ></LinedTextarea>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import Poem from './components/Poem.vue'
+import LinedTextarea from "./components/LinedTextarea.vue";
+import VueNumberInput from "@chenfengyuan/vue-number-input";
+import "./reset.css";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    LinedTextarea,
+    VueNumberInput
+  },
+  data() {
+    return {
+      exactSyllableCount: 10
+    };
   }
-}
+};
 </script>
 
 <style>
