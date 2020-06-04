@@ -1,24 +1,7 @@
 # poetry10
 
-## Project setup
-```
-npm install
-```
+A really simple program designed for counting syllables in poems.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Vue app
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Live environment: https://poem10-3dz6vktta.now.sh/
